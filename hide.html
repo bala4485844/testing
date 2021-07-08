@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden_words</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    .all{
+        text-align: center;
+    }
+button{
+    text-align: center;
+    background-color: rgb(136, 14, 173);
+    color: white;
+    font-size: 20px;
+    
+}
+</style>
+</head>
+<body>
+    <h1>the page contain hidden message</h1>
+    <h2>Please enter the password to see the Hidden_words </h2>
+    <div class="w50" id="b">
+        <h1>bala and hemanth are true friends </h1>
+    </div>
+    <div class="w51" id="i">
+        <h1>Indhu and seven are best friends</h1>
+    </div>
+    <div class="w52" id="w">
+       <h1>passwords is wrong </h1>
+    </div>
+    <div class="w53" id="wt">
+        <h1>you did not give the password</h1>
+    </div>
+    <div class="all">
+        <br>
+        <button onclick="fun1()" >Enter the password</button>
+    </div>
+    
+<script>
+    function fun1() {
+        var name = prompt("enter the password");
+        if (name == "") {
+            document.getElementById("wt").style.display="block";
+            document.getElementById("b").style.display="none";
+            document.getElementById("i").style.display="none";
+            document.getElementById("w").style.display="none";
+            
+        } else {
+        if (name == "bala") {
+            document.getElementById("b").style.display="block";
+            document.getElementById("i").style.display="none";
+            document.getElementById("w").style.display="none";
+            document.getElementById("wt").style.display="none";
+
+        } else {
+            if (name == "indhu") {
+            document.getElementById("i").style.display="block";
+            document.getElementById("w").style.display="none";
+            document.getElementById("wt").style.display="none";
+            document.getElementById("b").style.display="none";
+                
+            } else {
+                document.getElementById("w").style.display="block";
+                document.getElementById("wt").style.display="none";
+                document.getElementById("b").style.display="none";   
+                document.getElementById("i").style.display="none";
+            
+            }
+
+        }
+        }
+        }
+</script>
+</body>
+</html>
